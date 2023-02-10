@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Gautam</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        hr {
+            height: 2px;
+            border: none;
+            background-color: #000;
+            z-index: 999;
+            width: 100vw;
+        }
+
+        html {
+            background: #000;
+        }
+
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Div Of Images */
+        .image {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+        }
+
+        .image img {
+            width: 10%;
+            height: auto;
+            bottom: 0;
+        }
+
+        #hang {
+            position: fixed;
+            top: 0;
+            animation: swing 2s ease-in-out alternate infinite;
+            transform-origin: center 0px;
+        }
+
+        @keyframes swing {
+            0% {
+                transform: rotate(-2deg);
+            }
+
+            100% {
+                transform: rotate(2deg);
+            }
+
+        }
+
+        #catch {
+            position: fixed;
+            bottom: 0;
+            animation: jump 2s ease-in-out infinite;
+        }
+
+        @keyframes jump {
+
+            20%,
+            40%,
+            80%,
+            to {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-4rem);
+            }
+
+            60% {
+                transform: translateY(-0px);
+            }
+
+            80% {
+                transform: translateY(-4px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* This  work upto 480PX */
+        @media(max-width:480px) {
+            .image img {
+                width: 20%;
+            }
+        }
+
+        /* This  work after 480PX */
+        @media(min-width:1281px) {
+            .image img {
+                width: 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <hr>
+        <img id="hang" src="75a44d09f8efee37c7a82b65bff2b56f.png" alt="hanging minions">
+        <img id="catch" src="catch.png" alt="cqtching minions">
+    </div>
+</body>
+
+</html>
